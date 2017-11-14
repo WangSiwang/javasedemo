@@ -1,4 +1,4 @@
-package com.javase.demo;
+package com.javase.pdf;
 
 import java.io.FileOutputStream;
 
