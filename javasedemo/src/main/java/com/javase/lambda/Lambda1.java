@@ -1,5 +1,9 @@
 package com.javase.lambda;
 
+import java.util.function.Consumer;
+
+import org.junit.Test;
+
 /**
  * 
  * @author 3
@@ -16,5 +20,15 @@ public class Lambda1 {
 		}).start();
 		//Java 8方式：
 		new Thread( () -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
+		Consumer<String> con;
+		
+	}
+	@Test
+	public void test1() {
+
+		conn("12", System.out::println);
+	}
+	public void conn(String str,Consumer<String> conn) {
+		conn.accept(str);
 	}
 }
